@@ -13,6 +13,6 @@ urlpatterns = [
     path('student/add/', views.StudentViewSet.as_view(actions={'post': 'create'}), name='student'),
     path('student/<id>/', views.StudentViewSet.as_view(actions={'get': 'retrieve'}), name='student'),
     path('student/<id>/add-mark/', views.MarksViewSet.as_view(actions={'post': 'create'}), name='marks'),
-    path('mark/<id>/', views.MarksViewSet.as_view(actions={'get': 'retrieve'}), name='marks'),
-    path('results/', StudentReportView.as_view() ,name='StudentReportView'),
+    path('student/<id>/mark/', views.MarksViewSet.as_view(actions={'get': 'retrieve'}), name='marks'),
+    path('students/results/', StudentReportView.as_view() ,name='StudentReportView'),
 ]+router.urls
