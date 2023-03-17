@@ -63,5 +63,3 @@ class StudentReportView(APIView):
         return Response(report)
 
 
-class StudentList(generics.ListCreateAPIView):
-    pass
